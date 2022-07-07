@@ -10,8 +10,7 @@ builder.Services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.Re
 
 
 builder.Services.AddDbContext<SistemaEscolarContext>(opt =>
-    opt.UseLazyLoadingProxies().UseSqlServer(
-        (@"ConnectionStringsSQL")));
+    opt.UseLazyLoadingProxies().UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

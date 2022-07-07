@@ -31,14 +31,19 @@ namespace SistemaEscolar.Controllers
                 return NotFound("Não há nenhuma turma cadastrada");
             }
 
-            var listaAlunos = await _context.Aluno.ToListAsync();
-            List<Turma> turmasLista = await _context.Turma.ToListAsync();
+            var listaTurmas = await _context.Turma.ToListAsync();
+            var listaTurmasAtivas = new List<Turma>();
 
-            List<string> listaAlunosAtivos = new List<string>();
+            foreach (Turma turma in listaTurmas)
+            {
+                if (turma.ativo == true)
+                {
+                    listaTurmasAtivas.Add(turma);
+                }
+            }
 
-            
+            return listaTurmasAtivas;
 
-            return await _context.Turma.ToListAsync();
         }
 
         // GET: api/Turma/5

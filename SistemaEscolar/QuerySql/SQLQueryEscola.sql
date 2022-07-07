@@ -1,0 +1,20 @@
+USE sistema_escolar;
+
+CREATE TABLE Turma(
+	id INT PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(20) NOT NULL,
+	ativo BIT NULL
+);
+
+CREATE TABLE Aluno(
+	id INT PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(50) NOT NULL,
+	sobrenome VARCHAR(50) NOT NULL,
+	dataNascimento DATE NOT NULL,
+	sexo CHAR(1) NOT NULL,
+	turmaId INT NOT NULL FOREIGN KEY REFERENCES Turma(id),
+	totalFaltas INT NULL
+);
+
+
+

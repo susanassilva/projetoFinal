@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -25,18 +26,14 @@ namespace SistemaEscolar.Controllers
 
         // GET: api/Aluno
         [HttpGet]
-        public async Task<JsonResult> GetAluno()
+        public async Task<ActionResult<IEnumerable<Aluno>>> GetAluno()
         {
             if (_context.Aluno == null || _context.Aluno.Count() == 0)
             {
-                return new JsonResult("Não há nenhum aluno cadastrado");
+                return NotFound("Não há nenhum aluno cadastrado no Banco de Dados Escola.");
             }
-            var alunoLista = await _context.Aluno.ToListAsync();
-            var resultado = new JsonResult(new
-            {
-                StatusAtivo = alunoLista.FindAll(c => c.Turma.ativo == true),
-            });
-            return resultado;
+
+            return await _context.Aluno.ToListAsync();
         }
 
         // GET: api/Aluno/5
@@ -101,6 +98,7 @@ namespace SistemaEscolar.Controllers
                 {
                     if (aluno.nome == string.Empty)
                         listErrors.Add("O campo está em branco. Insira um nome");
+
                     response = JsonSerializer.Serialize(listErrors);
                 }
 
@@ -117,7 +115,7 @@ namespace SistemaEscolar.Controllers
             }
             catch (Exception ex)
             {
-                response = JsonSerializer.Serialize(ex.Message);
+                response = "Algum campo está em branco ou inexistente";
             }
 
             return CreatedAtAction("GetAluno", new { id = aluno.id }, response);
@@ -152,5 +150,8 @@ namespace SistemaEscolar.Controllers
         {
             return (_context.Aluno?.Any(c => c.nome == aluno.nome)).GetValueOrDefault();
         }
+
+
+
     }
 }

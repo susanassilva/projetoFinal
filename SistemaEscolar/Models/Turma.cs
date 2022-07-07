@@ -11,9 +11,5 @@ namespace SistemaEscolar.Models
 
         public bool? ativo { get; set; }
 
-        
-        public virtual List<Aluno>? Aluno { get; set; }
-
-        
     }
 }

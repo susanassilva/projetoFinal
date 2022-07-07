@@ -12,9 +12,9 @@ namespace SistemaEscolar.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Turma>().ToTable("turma");
             modelBuilder.Entity<Aluno>().ToTable("aluno");
 
-            modelBuilder.Entity<Turma>().ToTable("turma");
         }
 
         public DbSet<Aluno> Aluno { get; set; }
