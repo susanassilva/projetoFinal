@@ -1,4 +1,4 @@
-# Sistema Escolar - projeto final do curso ofericido pelas empresas Blue e RDI.
+# Sistema Escolar - projeto final do curso oferecido pelas empresas Blue e RDI.
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/susanassilva/projetoFinal/blob/main/LICENCE) 
 
@@ -28,7 +28,7 @@ Além dessas funcionalidades acima, a API tem as seguintes restrições (que for
 
 
 ## Diagrama ER 
-![Diagrama]()
+![Diagrama](https://github.com/susanassilva/projetoFinal/blob/main/SistemaEscolar/QuerySql/diagramaSistemaEscolar.jpg)
 
 # Tecnologias utilizadas
 
