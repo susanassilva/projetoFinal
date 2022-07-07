@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "6536c15a-7a83-4a92-9c05-2271fb8b168a",
+		"name": "Turma",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21621612"
+	},
+	"item": [
+		{
+			"name": "Consultar Turmas (com status ativo)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7172/api/Contato",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7172",
+					"path": [
+						"api",
+						"Contato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Turma pelo ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir Turmas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Joana\",\r\n  \"email\": \"joanasilva95@gmail.com\",\r\n  \"apelido\": \"joanasilva\",\r\n  \"dataNascimento\": \"1995-04-15T00:37:53.498Z\",\r\n  \"genero\": \"F\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7172/api/Contato",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7172",
+					"path": [
+						"api",
+						"Contato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Turmas",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"id\": 2,\r\n    \"nome\": \"Maria\",\r\n    \"email\": \"mariasilva95@gmail.com\",\r\n    \"apelido\": \"mariasilva\",\r\n    \"dataNascimento\": \"1995-04-15T00:37:53.498Z\",\r\n    \"genero\": \"F\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7172/api/Contato/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7172",
+					"path": [
+						"api",
+						"Contato",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Turmas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"id\": 2,\r\n    \"nome\": \"Maria\",\r\n    \"email\": \"mariasilva95@gmail.com\",\r\n    \"apelido\": \"mariasilva\",\r\n    \"dataNascimento\": \"1995-04-15T00:37:53.498Z\",\r\n    \"genero\": \"F\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7172/api/Contato/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7172",
+					"path": [
+						"api",
+						"Contato",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

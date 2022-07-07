@@ -1,2 +1,2 @@
 #ignore appsettings
-*.json
+.json

@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "2c11cd76-ae5a-4fef-b732-468f445d646d",
+		"name": "Aluno",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21621612"
+	},
+	"item": [
+		{
+			"name": "Consultar Alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7172/api/Contato",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7172",
+					"path": [
+						"api",
+						"Contato"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Aluno pelo ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Aluno / Mover aluno de turma",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"id\": 2,\r\n    \"nome\": \"Maria\",\r\n    \"email\": \"mariasilva95@gmail.com\",\r\n    \"apelido\": \"mariasilva\",\r\n    \"dataNascimento\": \"1995-04-15T00:37:53.498Z\",\r\n    \"genero\": \"F\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7172/api/Contato/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7172",
+					"path": [
+						"api",
+						"Contato",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Alunos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"id\": 2,\r\n    \"nome\": \"Maria\",\r\n    \"email\": \"mariasilva95@gmail.com\",\r\n    \"apelido\": \"mariasilva\",\r\n    \"dataNascimento\": \"1995-04-15T00:37:53.498Z\",\r\n    \"genero\": \"F\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7172/api/Contato/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7172",
+					"path": [
+						"api",
+						"Contato",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incluir Alunos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Joana\",\r\n  \"email\": \"joanasilva95@gmail.com\",\r\n  \"apelido\": \"joanasilva\",\r\n  \"dataNascimento\": \"1995-04-15T00:37:53.498Z\",\r\n  \"genero\": \"F\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7172/api/Contato",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7172",
+					"path": [
+						"api",
+						"Contato"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
